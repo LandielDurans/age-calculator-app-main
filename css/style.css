@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/age-calculator-app-main/age-calculator-app-main/assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/age-calculator-app-main/age-calculator-app-main/assets/fonts/Poppins-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/age-calculator-app-main/age-calculator-app-main\assets\fonts\Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/age-calculator-app-main/age-calculator-app-main/assets/fonts/Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/age-calculator-app-main/assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/age-calculator-app-main/age-calculator-app-main/assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+
+:root {
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+body {
+    background-color: var(--Off-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    display: grid;
+    background-color: var(--White);
+    height: 28rem;
+    width: 35rem;
+    border-radius: 2rem;
+    border-bottom-right-radius: 10rem;
+    padding: 2rem;
+}
+
+.inputs {
+    display: flex;
+    padding: 0rem 0rem 2rem 0rem;
+    gap: 1.5rem;
+}
+
+input {
+    height: 2.9rem;
+    width: 6.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--Smokey-grey);
+    display: flex;
+    margin-top: 5px;
+    padding-left: 12px;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 18px;
+}
+
+input:focus {
+    border: 1px solid var(--Purple);
+    caret-color: var(--Purple);
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input::placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    color: var(--Smokey-grey);
+    font-size: 10px;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 3px;
+}
+
+.line {
+    height: 0.1rem;
+    background-color: var(--Light-grey);
+}
+
+#arrow-img {
+    display: flex;
+    position: relative;
+    left: 27rem;
+    bottom: 2rem;
+    background-color: var(--Purple);
+    height: 4rem;
+    width: 4rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+#arrow-img:hover {
+    background-color: var(--Off-black);
+}
+
+h1 {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 45pt;
+}
+
+#years-span,
+#months-span,
+#days-span {
+    color: var(--Purple);
+}
+
+.invalidDate {
+    color: red;
+    font-size: 10px;
+    font-weight: 400;
+    position: relative;
+    top: 8px;
+    font-style: italic;
+    letter-spacing: 0.2px;
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        background-color: red;
+        height: 100vh;
+        width: 100vw;
+    }
+    .card {
+        display: grid;
+        width: 26rem;
+        height: 30rem;
+    }
+
+    .inputs{
+        padding-bottom: 4rem;
+    }
+    #arrow-img {
+        display: flex;
+        position: relative;
+        left: 9rem;
+        bottom: 2rem;
+        height: 4rem;
+        width: 4rem;
+    }
+    .dates{
+        padding-top: 2rem;
+    }
+}
